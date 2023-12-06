@@ -9,15 +9,15 @@ import eu.usrv.yamcore.YAMCore;
 
 /**
  * Various functions for/with Players (EntityPlayer)
- * 
+ *
  * @author Namikon
- * 
+ *
  */
 public class PlayerHelper {
 
     /**
      * Remove protection from the player
-     * 
+     *
      * @param pEntityPlayer
      */
     public static void RemoveProtection(EntityPlayer pEntityPlayer) {
@@ -26,7 +26,7 @@ public class PlayerHelper {
 
     /**
      * Actually GIVE protection to the player and notify the player
-     * 
+     *
      * @param pEntityPlayer
      */
     public static void GiveProtection(EntityPlayer pEntityPlayer) {
@@ -35,15 +35,13 @@ public class PlayerHelper {
 
     /**
      * Remove protection from the player
-     * 
+     *
      * @param pEntityPlayer
      */
     public static void RemoveProtection(EntityPlayer pEntityPlayer, boolean pNotifyPlayer) {
         try {
             pEntityPlayer.capabilities.disableDamage = false;
             pEntityPlayer.sendPlayerAbilities();
-            if (pNotifyPlayer)
-                PlayerChatHelper.SendNotifyWarning(pEntityPlayer, "Your magic bubble of protection fades...");
         } catch (Exception e) {
             YAMCore.instance.getLogger().error("RemoveProtection failed to Remove player's protection");
             YAMCore.instance.getLogger().DumpStack(e);
@@ -52,7 +50,7 @@ public class PlayerHelper {
 
     /**
      * Actually GIVE protection to the player
-     * 
+     *
      * @param pEntityPlayer
      * @param pNotifyPlayer notify the player about the change
      */
@@ -60,8 +58,6 @@ public class PlayerHelper {
         try {
             pEntityPlayer.capabilities.disableDamage = true;
             pEntityPlayer.sendPlayerAbilities();
-            if (pNotifyPlayer)
-                PlayerChatHelper.SendNotifyPositive(pEntityPlayer, "A magic bubble of protection appears...");
         } catch (Exception e) {
             YAMCore.instance.getLogger().error("RemoveProtection failed to give a player protection");
             YAMCore.instance.getLogger().DumpStack(e);
@@ -72,11 +68,11 @@ public class PlayerHelper {
      * Add a distance of (approximately) pDistance blocks to a players current location. Height (y) is not affected by
      * this, only X/Z Coordinates are. The current direction (North/South/East/West, also known as "Yaw") is used to
      * calculate the new location
-     * 
+     *
      * Note: This is usually used Server-Side, which means the Result might be "wrong". This is because the server isn't
      * always up to date about a players exact Yaw. If you want a more accurate result, use addDistanceByVecAndYaw() and
      * grab the current Yaw by other means (Custom Packets,..)
-     * 
+     *
      * @param pPlayer   The player; Source location
      * @param pDistance The distance (in blocks) to be added
      * @return A Vector describing the new location
@@ -93,7 +89,7 @@ public class PlayerHelper {
      * Add a distance of (approximately) pDistance blocks to a given Vector. Height (y) is not affected by this, only
      * X/Z Coordinates are. The current direction (North/South/East/West, also known as "Yaw") is used to calculate the
      * new location
-     * 
+     *
      * @param pSourceLocation The source location as Vector
      * @param pYaw            The Yaw (Usually taken from rotationYaw at EntityPlayer)
      * @param pDistance       The distance (in blocks) to be added
