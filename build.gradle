@@ -32,27 +32,11 @@ import javax.inject.Inject
 
 buildscript {
     repositories {
-        mavenCentral()
-
-        maven {
-            name 'forge'
-            url 'https://maven.minecraftforge.net'
-        }
-        maven {
             // GTNH RetroFuturaGradle and ASM Fork
             name "GTNH Maven"
             url "http://jenkins.usrv.eu:8081/nexus/content/groups/public/"
             allowInsecureProtocol = true
         }
-        maven {
-            name 'sonatype'
-            url 'https://oss.sonatype.org/content/repositories/snapshots/'
-        }
-        maven {
-            name 'Scala CI dependencies'
-            url 'https://repo1.maven.org/maven2/'
-        }
-
         mavenLocal()
     }
 }
