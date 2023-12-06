@@ -9,6 +9,7 @@ import net.minecraft.util.EnumChatFormatting;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+
 import eu.usrv.yamcore.auxiliary.ItemDescriptor;
 
 /**
@@ -27,7 +28,7 @@ public class JSONChatText {
 
     /**
      * Create a JSON Formatted message
-     * 
+     *
      * @param pMessage
      * @return
      */
@@ -39,7 +40,7 @@ public class JSONChatText {
 
     /**
      * Create a JSON Formatted message with a simple text-tooltip
-     * 
+     *
      * @param pMessage
      * @param pToolTip
      * @return
@@ -53,7 +54,7 @@ public class JSONChatText {
 
     /**
      * Create a JSON Formatted message with a simple item-tooltip
-     * 
+     *
      * @param pMessage
      * @param pItem
      * @return
@@ -67,7 +68,7 @@ public class JSONChatText {
 
     /**
      * Create a JSON Formatted message with a simple item-tooltip
-     * 
+     *
      * @param pMessage
      * @param pItem
      * @return
@@ -78,7 +79,7 @@ public class JSONChatText {
 
     /**
      * Create a JSON Formatted message with a simple item-tooltip
-     * 
+     *
      * @param pMessage
      * @param pItem
      * @return
@@ -89,7 +90,7 @@ public class JSONChatText {
 
     /**
      * Create JSON Formatted message that will run a command on click
-     * 
+     *
      * @param pMessage
      * @param pCommand
      * @return
@@ -100,7 +101,7 @@ public class JSONChatText {
 
     /**
      * Create JSON Formatted message that will run or suggest a command on click
-     * 
+     *
      * @param pMessage
      * @param pCommand
      * @param pSuggestOnly if true, the command will not be executed directly
@@ -142,7 +143,7 @@ public class JSONChatText {
 
     /**
      * Construct the chat object into an useable JSON string for sending
-     * 
+     *
      * @return
      */
     public String getConstructed() {

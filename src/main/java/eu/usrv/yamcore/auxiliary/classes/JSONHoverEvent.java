@@ -4,6 +4,7 @@ package eu.usrv.yamcore.auxiliary.classes;
 import net.minecraft.nbt.NBTTagCompound;
 
 import com.google.gson.JsonObject;
+
 import eu.usrv.yamcore.auxiliary.ItemDescriptor;
 
 public class JSONHoverEvent {
@@ -20,7 +21,7 @@ public class JSONHoverEvent {
 
     /**
      * Generate a Hover-Event that will display regular text.
-     * 
+     *
      * @param pMessage The message to be displayed as tooltip
      * @return
      */
@@ -30,7 +31,7 @@ public class JSONHoverEvent {
 
     /**
      * Generate a Hover-Event that will display an Item tooltip. This will also show any lore this item contains
-     * 
+     *
      * @param pItem The itemdescriptor of that item
      * @return
      */
@@ -41,7 +42,7 @@ public class JSONHoverEvent {
     /**
      * Generate a Hover-Event that will show an achievement. Take the full name from your own mod or check
      * /stats/uuid.json for the achievement you want to display
-     * 
+     *
      * @param pStatIdentifier
      * @return
      */
@@ -66,7 +67,7 @@ public class JSONHoverEvent {
 
     /**
      * Return the constructed JSON Element. Use it in your own chat-handler, or pass it to JSONChatText class
-     * 
+     *
      * @return
      */
     public JsonObject getJson() {
